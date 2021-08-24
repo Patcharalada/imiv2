@@ -16,7 +16,17 @@
 
     <script>
         $(()=>{
-            alert("Hello");
+            // alert("Hello");
+
+            let url = "https://api.thingspeak.com/channels/1458422/feeds.json?results=1";
+            
+            $.getJSON(url)
+                .done(function(data){
+
+                })
+                .fail(function(error){
+                
+                )};
         });
 
     </script>
