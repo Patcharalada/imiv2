@@ -9,7 +9,7 @@
   <body>
     <div class="row">
         <div class="col-4"></div>
-            <iframe width="400px" hight="1000px" src="https://thingspeak.com/channels/1458422/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15" frameborder="0"></iframe>
+            <iframe width="500px" hight="250px" src="https://thingspeak.com/channels/1458422/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15" frameborder="0"></iframe>
         <div class="col-4"></div>
         <div class="col-4"></div>
     </div>
