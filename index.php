@@ -21,7 +21,6 @@
             let url = "https://api.thingspeak.com/channels/1458422/feeds.json?results=1";
             $.getJSON(url)
                 .done(function(data){
-                    console.log(data);
                 })
                 .fail(function(error){
                 )};
