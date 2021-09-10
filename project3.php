@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     
-    <title>Show Graph</title>
+    <title>Project3</title>
     
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
@@ -15,20 +15,20 @@
   <body>
 
     <div class="container">
-        <h3><b>62106554 Patcharalada Thongkleang</b></h3>
+        <p><b>62106554 Patcharalada Thongkleang</b></p>
     </div>
 
     <div class="container">
         <div class="row">
             <div class="col-4">
-                <canvas id="tempp" width="400" height="200"></canvas>
+                <canvas id="ttemp" width="400" height="200"></canvas>
             </div>
             <div class="class col-4">
-                <canvas id="humm" width="400" height="200"></canvas>
+                <canvas id="hhum" width="400" height="200"></canvas>
             </div>
 
             <div class="class col-4">
-                <canvas id="lightt" width="400" height="200"></canvas>
+                <canvas id="llight" width="400" height="200"></canvas>
             </div>
         </div>
 
@@ -72,7 +72,7 @@
   <script>
 
         function showtemp(data){
-            var ctx=document.getElementById('tempp').getContext('2d');
+            var ctx=document.getElementById('ttemp').getContext('2d');
             var showtemp=new Chart(ctx,{
                 type:'line',
                 data:{
@@ -81,7 +81,7 @@
                     label:data.label,
                     data:data.data,
                     fill: false,
-                    borderColor: '#4dd8ad ',
+                    borderColor: '#9d43a0 ',
                     tension: 0.1
                     }]
                 }
@@ -89,7 +89,7 @@
         }
 
         function showhum(data2){
-            var ctxy=document.getElementById('humm').getContext('2d');
+            var ctxy=document.getElementById('hhum').getContext('2d');
             var showhum=new Chart(ctxy,{
                 type:'line',
                 data:{
@@ -98,7 +98,7 @@
                     label:data2.label,
                     data:data2.data,
                     fill: false,
-                    borderColor: '#eff264 ',
+                    borderColor: '#9d43a0 ',
                     tension: 0.1
                     }]
                 }
@@ -106,7 +106,7 @@
         }
         
         function showlight(data3){
-            var ctxy=document.getElementById('lightt').getContext('2d');
+            var ctxy=document.getElementById('llight').getContext('2d');
             var showlight=new Chart(ctxy,{
                 type:'line',
                 data:{
@@ -115,7 +115,7 @@
                     label:data3.label,
                     data:data3.data,
                     fill: false,
-                    borderColor: '#f2a160 ',
+                    borderColor: '#9d43a0 ',
                     tension: 0.1
                     }]
                 }
@@ -143,13 +143,13 @@
              var xlabel=[];
              var temp=[];
              var humi=[];
-             var light=[];
+             var ligh=[];
              
              $.each(feed,(k,v)=>{
                 xlabel.push(v.entry_id);
                 humi.push(v.field1);
                 temp.push(v.field2);
-                light.push(v.field3);
+                ligh.push(v.field3);
                 console.log(k,humi);
              });
              
@@ -168,7 +168,7 @@
 
               var data3=new Object();
               data3.xlabel=xlabel;
-              data3.data=light;
+              data3.data=ligh;
               data3.label=chan.field3;
               showlight(data3);
 
