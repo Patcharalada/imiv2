@@ -143,13 +143,13 @@
              var xlabel=[];
              var temp=[];
              var humi=[];
-             var ligh=[];
+             var light=[];
              
              $.each(feed,(k,v)=>{
                 xlabel.push(v.entry_id);
                 humi.push(v.field1);
                 temp.push(v.field2);
-                ligh.push(v.field3);
+                light.push(v.field3);
                 console.log(k,humi);
              });
              
@@ -168,7 +168,7 @@
 
               var data3=new Object();
               data3.xlabel=xlabel;
-              data3.data=ligh;
+              data3.data=light;
               data3.label=chan.field3;
               showlight(data3);
 
@@ -188,4 +188,3 @@
 
   </script>
 </html>
-
